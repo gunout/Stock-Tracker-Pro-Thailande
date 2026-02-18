@@ -474,7 +474,7 @@ with st.spinner(f"🔄 Chargement des données pour {symbol}..."):
     hist, info = load_stock_data(symbol, period, interval)
 
 if hist is None or hist.empty:
-    st.error(f"""
+    st.markdown(f"""
     <div class='error-message'>
         ❌ Impossible de charger les données pour {symbol}<br>
         Vérifiez que le symbole est correct (ex: PTT.BK, SCB.BK, KBANK.BK)<br>
